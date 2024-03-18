@@ -18,14 +18,12 @@ import edu.wpi.first.wpilibj.motorcontrol.PWMSparkMax;
 //import com.ctre.phoenix.motorcontrol.ControlMode;
 //import com.ctre.phoenix.motorcontrol.NeutralMode;
 //import com.ctre.phoenix.motorcontrol.can.VictorSPX;
-//import com.ctre.phoenix; 
-//import com.ctre.phoenix.motorcontrol.can.WPI_VictorSPX; 
-//import edu.wpi.first.wpilibj.motorcontrol.MotorController;
-//import edu.wpi.first.wpilibj.motorcontrol.PWMMotorControllerGroup;
-//import edu.wpi.first.wpilibj.motorcontrol.Spark; 
+import edu.wpi.first.wpilibj.motorcontrol.MotorController;
+import edu.wpi.first.wpilibj.motorcontrol.PWMMotorControllerGroup;
+import edu.wpi.first.wpilibj.motorcontrol.Spark; 
 //import edu.wpi.first.wpilibj.motorcontrol.MotorControllerGroup; 
-//import edu.wpi.first.wpilibj.PWMMotorController
-//import edu.wpi.first.wpilibj.motorcontrol.PWMMotorController; 
+//import edu.wpi.first.wpilibj.PWMMotorController; 
+import edu.wpi.first.wpilibj.motorcontrol.PWMMotorController; 
 import edu.wpi.first.wpilibj.drive.DifferentialDrive; 
 import edu.wpi.first.wpilibj.Timer; 
 import edu.wpi.first.wpilibj.XboxController;
@@ -102,11 +100,14 @@ public class Robot extends TimedRobot {
     leftRear.setInverted(true); 
     rightFront.setInverted(false);
     rightRear.setInverted(false); 
+
+
     //hangTopVictor.setInverted(true); 
     //rightMotors.setInverted(false); 
 
     //leftRear.follow(leftFront); 
     //rightRear.follow(rightFront); 
+
 
     feedWheel.setInverted(true);
     launchWheel.setInverted(true);
@@ -258,8 +259,10 @@ public class Robot extends TimedRobot {
   
     //launcher code here
     if(operatorController.getLeftBumper()) {
+
       launchPower = -0.5; 
       feedPower = -0.5; 
+
     }
     else{
       if(operatorController.getAButtonPressed()){
